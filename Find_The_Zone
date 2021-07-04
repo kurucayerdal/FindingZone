@@ -1,0 +1,47 @@
+public static void main(String[] args) {
+//Write a program that gives the zone of the point according to the x and y coordinates read.
+        // (-,+)->B zone
+        // (+,+)->A zone
+        // (-,-)->C zone
+        // (+,-)->D zone
+
+        Scanner scr=new Scanner(System.in);
+        System.out.print("enter x coordinate: ");
+        double x = scr.nextDouble();
+        System.out.print("enter y coordinate: ");
+        double y = scr.nextDouble();
+
+        if (x>0&&y>0) {
+            System.out.println("The point is in zone A");
+                    }
+        else{
+            if(x>0&&y<0) {
+                System.out.println("The point is in zone D");
+            }
+            else {
+                if (x<0 && y>0){
+                    System.out.println("The point is in zone B");
+                }
+                else {
+                    if (x<0 && y<0){
+                        System.out.println("The point is in zone C");
+                    }
+                    else {
+                        if (x==0 && y==0){
+                            System.out.println("The point is above the Origin (zero)");
+                        }
+                        else {
+                            if (x==0 && y!=0){
+                                System.out.println("The point is on the Y plane");
+                            }
+                            else {
+                                if (y==0 && x!=0){
+                                    System.out.println("The point is on the X plane");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
